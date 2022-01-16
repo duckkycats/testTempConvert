@@ -1,0 +1,27 @@
+
+<header>
+    <h1> {{ title }} </h1>
+    
+</header>
+
+<div>
+    <h3>Celsius</h3>
+    <input type="number" [value]="cel">
+    
+    
+</div>
+
+<br>
+
+<div>
+    <h3>Farenheit</h3>
+    <input type="number">
+</div>
+
+<br>
+
+<div>
+    <app-button color="blue" text="Celsius" (btnClick)="toggleCelTask()"></app-button>
+    <app-button color="green" text="Farenheit" (btnClick)="toggleFarTask()"></app-button>
+</div>
+
