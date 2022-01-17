@@ -1,0 +1,19 @@
+
+
+.container{
+    margin-top: 50px;
+    padding: 30px;
+}
+
+.container-celsius{
+    margin-bottom: 10px;
+}
+
+.container-farenheit{
+    margin-bottom: 100px;
+}
+
+.btn-farenheit{
+    display: flex;
+    justify-content: center;
+}

@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { TestBed } from '@angular/core/testing';
 
 @Component({
   selector: 'app-header',
@@ -8,30 +9,39 @@ import { Component, OnInit, Input } from '@angular/core';
 export class HeaderComponent implements OnInit {
   
   title: string = 'Temperature Converter';
-  celsius: number = 0;
-  farenheit: number = 0;
 
-  add: number = 1;
-
-  
+  celsius: any;
+  farenheit: any;
 
   constructor() {}
 
   ngOnInit(): void {
   }
 
- 
-  // _________ Celsius _________
-  btnCelTask(){
-    this.celsius++;
-    // console.log(this.celsius);
-    
+
+ // _________ Celsius _________
+  public calculateCel(): void {
+      this.farenheit = (this.celsius * 9 / 5) + 32;
+      console.log('farenheit', this.farenheit);
   }
+
+
+  // if (this.farenheit = (this.celsius * 9 / 5) + 32) {
+  //   console.log('farenheit', this.farenheit);
+  // } else {
+    
+  // }
+    
+ 
 
     // _________ Farenheit _________
-  btnFarTask(){
-
-    console.log(this.farenheit + this.add);
+  public calculateFar(): void {
+    this.celsius =  (this.farenheit - 32) * (5 / 9);
+    console.log('CEL', this.celsius);
   }
 
+
+
 }
+
+

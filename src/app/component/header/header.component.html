@@ -1,35 +1,38 @@
 
 <header>
-    <h1> {{ title }} </h1>
-    
+    <!-- <h1> {{ title }} </h1> -->
 </header>
 
-<div>
-    <h3>Celsius</h3>
-    <!-- <input type="number" [value]="cel"> -->
-    <input type="number" [(ngModel)]="celsius">
-    <!-- <p>{{celsius}}</p> -->
+<div class="container border border-primary">
+    <div class="row">
+
+        <div class="container-celsius">
+            <h3>Celsius</h3>
+            <input class="form-control" type="number" [(ngModel)]="celsius">
+        </div>
+   
+
+        <div class="container-farenheit">
+            <h3>Farenheit</h3>
+            <input class="form-control" type="number" [(ngModel)]="farenheit">
+        </div>
+
     
+        <div class="container-button">
+            <div class="row">
+
+                <div class="col">
+                    <button type="button" class="btn btn-primary btn-celsius" (click)="calculateFar()">Celsius</button>
+                </div>
+
+                <div class="col d-flex flex-row-reverse">
+                    <button type="button" class="btn btn-outline-secondary" (click)="calculateCel()">Farenheit</button>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
 </div>
 
-<br>
-
-<div>
-    <h3>Farenheit</h3>
-    <input type="number" >
-</div>
-
-<br>
-
-<div>
-    <!-- Cancel temporary -->
-    <!-- <app-button color="blue" text="" (btnClick)="btnCelTask()"></app-button>
-    <app-button color="green" text="Farenheit" (btnClick)="btnFarTask()"></app-button> -->
-
-    <button type="button" class="btn btn-primary" (click)="btnCelTask()">Celsius</button>
-    
-    <br><br>
-
-    <button type="button" class="btn btn-secondary" (click)="btnFarTask()">Farenheit</button>
-</div>
 
