@@ -8,23 +8,30 @@ import { Component, OnInit, Input } from '@angular/core';
 export class HeaderComponent implements OnInit {
   
   title: string = 'Temperature Converter';
+  celsius: number = 0;
+  farenheit: number = 0;
 
-  @Input() cel = 0;
+  add: number = 1;
 
-  constructor() { }
+  
+
+  constructor() {}
 
   ngOnInit(): void {
   }
 
  
-  toggleCelTask(){
-    console.log('Celsius');
-    this.cel = 5
-    console.log(this.cel);
+  // _________ Celsius _________
+  btnCelTask(){
+    this.celsius++;
+    // console.log(this.celsius);
+    
   }
-  
-  toggleFarTask(){
-    console.log('Farenheit');
+
+    // _________ Farenheit _________
+  btnFarTask(){
+
+    console.log(this.farenheit + this.add);
   }
 
 }

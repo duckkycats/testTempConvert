@@ -6,8 +6,9 @@
 
 <div>
     <h3>Celsius</h3>
-    <input type="number" [value]="cel">
-    
+    <!-- <input type="number" [value]="cel"> -->
+    <input type="number" [(ngModel)]="celsius">
+    <!-- <p>{{celsius}}</p> -->
     
 </div>
 
@@ -15,13 +16,20 @@
 
 <div>
     <h3>Farenheit</h3>
-    <input type="number">
+    <input type="number" >
 </div>
 
 <br>
 
 <div>
-    <app-button color="blue" text="Celsius" (btnClick)="toggleCelTask()"></app-button>
-    <app-button color="green" text="Farenheit" (btnClick)="toggleFarTask()"></app-button>
+    <!-- Cancel temporary -->
+    <!-- <app-button color="blue" text="" (btnClick)="btnCelTask()"></app-button>
+    <app-button color="green" text="Farenheit" (btnClick)="btnFarTask()"></app-button> -->
+
+    <button type="button" class="btn btn-primary" (click)="btnCelTask()">Celsius</button>
+    
+    <br><br>
+
+    <button type="button" class="btn btn-secondary" (click)="btnFarTask()">Farenheit</button>
 </div>
 
